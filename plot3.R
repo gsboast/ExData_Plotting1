@@ -26,7 +26,7 @@
 
         # plot three data series to one chart - outout as .png
         par(col="black")
-        png(file = "./plot3.png", bg = "white", height = 504, width = 504)
+        png(file = "./plot3.png", bg = "white", height = 480, width = 480)
         plot(dfSub$Sub_metering_1 ~ dfSub$Date,
                ylab="Energy sub metering",
                xlab="",

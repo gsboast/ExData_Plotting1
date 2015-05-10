@@ -18,7 +18,7 @@
         dfSub <- filter(dfConsumption, Date ==  "2007-02-01" | Date == "2007-02-02")
 
         # Plot histogram of Global Active Power variable with parameters needed to match example.
-        png(file = "./plot1.png", bg = "white", height = 504, width = 504)
+        png(file = "./plot1.png", bg = "white", height = 480, width = 480)
         hist(dfSub$Global_active_power,
              col = "red",
              main = "Global Active Power", 

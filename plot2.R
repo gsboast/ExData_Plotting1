@@ -23,7 +23,7 @@
         dfSub$Date <- as.POSIXct(dCatDateTime)
 
         # Setup graphical parameters adn filename for plot()- the example plots show on screen as 504x504 pixels
-        png(file = "./plot2.png", bg = "white", height = 504, width = 504)
+        png(file = "./plot2.png", bg = "white", height = 480, width = 480)
         par(col="black")
         plot(dfSub$Global_active_power ~ dfSub$Date,
                ylab="Global Active Power (kilowatts)",

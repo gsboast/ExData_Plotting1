@@ -20,7 +20,7 @@
         dCatDateTime <- paste(as.Date(dfSub$Date), dfSub$Time)
         dfSub$Date <- as.POSIXct(dCatDateTime)
       
-        png(file = "./plot4.png", bg = "white", height = 504, width = 504)
+        png(file = "./plot4.png", bg = "white", height = 480, width = 480)
         par(mfrow =c(2,2))
        
         #First plot
