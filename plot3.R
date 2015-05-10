@@ -22,7 +22,7 @@
         dfConsumption$Date <- as.Date(dfConsumption$Date, format = "%d/%m/%Y")
         dfSub <- filter(dfConsumption, Date ==  "2007-02-01" | Date == "2007-02-02")
         dCatDateTime <- paste(as.Date(dfSub$Date), dfSub$Time)
-	  dfSub$Date <- as.POSIXct(dCatDateTime)
+        dfSub$Date <- as.POSIXct(dCatDateTime)
 
         # plot three data series to one chart - outout as .png
         par(col="black")

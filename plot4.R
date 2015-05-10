@@ -13,12 +13,12 @@
              na.strings = "?", header = TRUE, nrows = 2075259, 
              stringsAsFactors = TRUE))
        
-        # Convert charter date to date, combine with time, create POSIXct variable to plot weekdays on x-axis.
+        # Convert character date to date, combine with time, create POSIXct variable to plot weekdays on x-axis.
 
         dfConsumption$Date <- as.Date(dfConsumption$Date, format = "%d/%m/%Y")
         dfSub <- filter(dfConsumption, Date ==  "2007-02-01" | Date == "2007-02-02")
         dCatDateTime <- paste(as.Date(dfSub$Date), dfSub$Time)
-	  dfSub$Date <- as.POSIXct(dCatDateTime)
+        dfSub$Date <- as.POSIXct(dCatDateTime)
       
         png(file = "./plot4.png", bg = "white", height = 504, width = 504)
         par(mfrow =c(2,2))
@@ -32,7 +32,7 @@
                col = "black")
 
         #Second plot
-         plot(dfSub$Voltage ~ dfSub$Date,
+        plot(dfSub$Voltage ~ dfSub$Date,
                ylab="Voltage",
                xlab="datetime",
                type="l")

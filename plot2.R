@@ -20,7 +20,7 @@
         dfConsumption$Date <- as.Date(dfConsumption$Date, format = "%d/%m/%Y")
         dfSub <- filter(dfConsumption, Date ==  "2007-02-01" | Date == "2007-02-02")
         dCatDateTime <- paste(as.Date(dfSub$Date), dfSub$Time)
-	  dfSub$Date <- as.POSIXct(dCatDateTime)
+        dfSub$Date <- as.POSIXct(dCatDateTime)
 
         # Setup graphical parameters adn filename for plot()- the example plots show on screen as 504x504 pixels
         png(file = "./plot2.png", bg = "white", height = 504, width = 504)
